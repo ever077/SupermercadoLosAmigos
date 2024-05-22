@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <script src="http://kit.fontawesome.com/fa04600604.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+
+    <title>Los Amigos Supermercado</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="dropdown-menu">
+                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+                    <div class="dropdown-content">
+                        <a href="./index.html">Inicio</a>
+                        <a href="./contacto.html">Contacto</a>
+                        <a href="./sucursales.html">Sucursales</a>
+                        <a href="./marca.html">Nuestra Marca</a>
+                        <div class="search" id="drpodown-search">
+                            <input type="text" placeholder="Buscar..">
+                            <a href="#"><i class="fas fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href="index.html"><img src="../IMG/Logo_sin_fondo.png" alt="Logo Supermercado"></a>
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="./index.html" class="underline-animation">Inicio</a></li>
+                        <li><a href="./contacto.html" class="underline-animation">Contacto</a></li>
+                        <li><a href="./sucursales.html" class="underline-animation">Sucursales</a></li>
+                        <li><a href="./marca.html" class="underline-animation">Nuestra Marca</a></li>
+                    </ul>
+                </div>
+                <div class="nav-header-right">
+                    <div id="nav-search" class="search">
+                        <input type="text" placeholder="Buscar..">
+                        <a href="#"><i class="fas fa-search"></i></a>
+                    </div>
+                    <div class="cart">
+                        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <!-- SLIDER IFRAME -->
+            <div class="promo-section">
+                <div class="iframe-container">
+                    <iframe src="./slider.html" class="iframe-slider"></iframe>
+                </div>
+            </div>
+
+            <!-- SIDE BAR -->
+            <section class="side-bar-section">
+                <h2 class="h2-side-bar">Categorias</h2>
+                <aside class="side-bar">
+                    <ul>
+                        <li>
+                            <div class="primary-category">
+                                <a class="primary-category" href="#">Despensa</a>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="primary-category">
+                                <a class="primary-category" href="#">Bebé</a>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="primary-category">
+                                <a class="primary-category" href="#">Cuidado del hogar</a>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="primary-category">
+                                <a class="primary-category" href="#">Cuidado personal</a>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="primary-category">
+                                <a class="primary-category" href="#">Bebidas y bodega</a>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="primary-category">
+                                <a class="primary-category" href="#">Congelados</a>
+                                <div></div>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <!-- CONTENT -->
+            <section class="content-section backround-animation">
+                <div class="contact-container">
+                    <div class="contact-body">
+                        <h3>Contáctenos</h3>
+                        <form class="contact-form" action="#" method="post">
+                            <div>
+                                <label for="topic">El asunto:</label>
+                                <select name="topic" id="topic" required>
+                                    <option value="">Seleccione una opción</option>
+                                    <option value="ship">Envíos</option>
+                                    <option value="hours">Horarios de atención</option>
+                                    <option value="claim">Reclamos</option>
+                                    <option value="general">General</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="name">Nombre:</label>
+                                <input type="text" name="name" id="name" required>
+                            </div>
+                            <div>
+                                <label for="lastname">Apellido:</label>
+                                <input type="text" name="lastname" id="lastname" required>
+                            </div>
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+                            <div>
+                                <label>Género:</label>
+                                <div class="gender-box">
+                                    <input type="radio" name="gender" id="gender-male" value="male" checked>
+                                    <label for="gender-male">Hombre</label>
+                                </div>
+                                <div class="gender-box">
+                                    <input type="radio" name="gender" id="gender-female" value="female">
+                                    <label for="gender-female">Mujer</label>
+                                </div>
+                            </div>
+                            <div class="textarea-message">
+                                <label for="message">Mensaje:</label>
+                                <textarea name="message" id="message"></textarea>
+                            </div>
+                            <div class="btn-form-container">
+                                <input class="btn-form" type="submit" value="Enviar">
+                                <input class="btn-form" type="reset" value="Borrar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="nav nav-container footer">
+            <div class="footer-left">
+                <p>© Copyright</p>
+                <ul class="developers">
+                    <li>Desarrolladores:</li>
+                    <li>Ever Dario, Godoy</li>
+                    <li>Diego, Pereyra</li>
+                    <li>Victoria, Ricardo</li>
+                    <li>Guillermina Escobar</li>
+                </ul>
+            </div>
+            <div class="footer-nav-items">
+                <ul>
+                    <li><a href="./index.html" class="underline-animation">Inicio</a></li>
+                    <li><a href="./contacto.html" class="underline-animation">Contacto</a></li>
+                    <li><a href="./sucursales.html" class="underline-animation">Sucursales</a></li>
+                    <li><a href="./marca.html" class="underline-animation">Nuestra Marca</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+            
+</body>
+
+</html>
