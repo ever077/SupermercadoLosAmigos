@@ -411,6 +411,8 @@ display: none;
 .products-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 98%;
+    margin-bottom: 5px;
     column-gap: .5rem;
     row-gap: 1rem;
     background-color: var(--secondary-color);
@@ -421,14 +423,39 @@ display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: .1rem;
+    gap: 8px;
     font-size: var(--font-size-fourth);
     padding-bottom: 2px;
 }
 
-.product img {
+.product > h3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.product .description {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(158, 157, 157);
+    margin: 0 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.product > p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.product > img {
+    display: flex;
     height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 .btn-add-product {
