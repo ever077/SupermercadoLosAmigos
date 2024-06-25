@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <!-- Styles -->
+  <style>
+    body {
+      background: #ff5b5b;
+      background: linear-gradient(to right, #fd3030 10%,#ffcf65 70%);
+    }
+
+    .bg {
+      background-image: url("https://media.istockphoto.com/id/1414488777/es/foto/padres-felices-y-su-hija-eligiendo-comida-en-la-secci%C3%B3n-refrigerada-en-el-supermercado.jpg?s=612x612&w=0&k=20&c=zG5t5UnFoB4-JN6vKBSBvmLVB4-GAQr4Ut6MKnP-kpg=");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container w-75 bg-white my-5 rounded shadow">
+    <div class="row align-items-stretch">
+      <div class="col bg d-none d-md-block col-md-5 col-lg-5 col-xl-6 col-xxl-5 rounded-start">
+
+      </div>
+      <div class="col bg-white py-3 px-4 rounded-end">
+        <div class="text-end">
+          <img src="../IMG/Logo.png" width="70px" alt="Logo">
+        </div>
+
+        <h2 class="fw-bold text-center py-2">Crear cuenta</h2>
+
+        <!-- Login -->
+         <form action="#">
+            <div class="mb-2">
+              <label for="name" class="form-label">Nombres:</label>
+              <input type="text" class="form-control" name="name">
+            </div>
+            <div class="mb-2">
+              <label for="lastname" class="form-label">Apellido:</label>
+              <input type="text" class="form-control" name="lastname">
+            </div>
+            <div class="mb-2 form-check form-check-inline">
+              <label class="form-check-label" for="gender-male">Hombre</label>
+              <input class="form-check-input" type="radio" name="gender" id="gender-male" checked>
+            </div>
+            <div class="mb-2 form-check form-check-inline">
+              <label class="form-check-label" for="gender-female">Mujer</label>
+              <input class="form-check-input" type="radio" name="gender" id="gender-female">
+            </div>
+            <div class="mb-2">
+              <label for="date" class="form-label">Fecha de nacimiento:</label>
+              <input type="date" class="form-control" name="date">
+            </div>
+            <div class="mb-2">
+              <label for="email" class="form-label">Correo electrónico:</label>
+              <input type="email" class="form-control" name="email">
+            </div>
+            <div class="mb-2">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control" name="password">
+            </div>
+            <div class="mb-2">
+              <label for="password-repeat" class="form-label">Vuelve a escribir la contraseña:</label>
+              <input type="password" class="form-control" name="password-repeat">
+            </div>
+
+            <!-- Botones -->
+            <div class="container w-100 pt-4">
+              <div class="row">
+                <div class="col-6">
+                  <button id="btn-registrar" type="submit" class="btn btn-success w-100 my-1">Regístrate</button>
+                </div>
+                <div class="col-6">
+                  <button id="btn-cancelar" class="btn btn-outline-danger w-100 my-1">Cancelar</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="my-3">
+              <span>¿Ya tienes cuenta? <a href="./login.html">Inicia sesión</a></span>
+            </div>
+         </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="../JS/login/registerController.js"></script>
+</body>
+
+</html>
