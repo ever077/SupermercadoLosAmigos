@@ -40,24 +40,20 @@
         <h2 class="fw-bold text-center py-4">¡Bienvenido!</h2>
 
         <!-- Login -->
-         <form action="#">
+         <form id="login-form" action="#">
             <div class="mb-4">
               <label for="email" class="form-label">Correo electrónico:</label>
-              <input type="email" class="form-control" name="email">
+              <input type="email" class="form-control" name="email" id="email">
             </div>
             <div class="mb-4">
               <label for="password" class="form-label">Contraseña:</label>
-              <input type="password" class="form-control" name="password">
+              <input type="password" class="form-control" name="password" id="password">
             </div>
             <div class="mb-4 form-check">
               <input type="checkbox" name="connected" class="form-check-input" id="">
               <label for="connected" class="form-check-label">Mantenerme conectado</label>
             </div>
 
-            <!-- Boton -->
-            <!-- <div class="d-grid">
-              <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-            </div> -->
             <!-- Botones -->
             <div class="container w-100 pt-4">
               <div class="row">
@@ -71,7 +67,7 @@
             </div>
 
             <div class="my-3">
-              <span>¿No tienes cuenta? <a href="./registro.html">Regístrate</a></span>
+              <span>¿No tienes cuenta? <a id="btn-register" href="./registro.html">Regístrate</a></span>
             </div>
          </form>
       </div>
@@ -82,6 +78,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+  <script src="../JS/validation/userValidation.js"></script>
   <script src="../JS/login/loginController.js"></script>
 </body>
 

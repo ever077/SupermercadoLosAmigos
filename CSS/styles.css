@@ -198,6 +198,26 @@ body {
     cursor: default;
 }
 
+.user-logged {
+    font-size: var(--font-size-fourth);
+    color: var(--secondary-color);
+}
+
+.user-logged p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-logged span {
+    text-wrap: nowrap;
+}
+
+.user-logged a {
+    color: var(--fourth-color);
+    text-decoration: none;
+}
+
 /* Underline Animation */
 
 .underline-animation::after {
@@ -811,8 +831,8 @@ display: none;
 }
 
 /* **********************  MEDIA QUERIES  ****************************** */
-
-@media only screen and (max-width: 860px) {
+/* 915px */
+@media only screen and (max-width: 1010px) {
     /* HIDE HEADER BUTTONS */
 
     .dropdown-menu {
@@ -824,7 +844,8 @@ display: none;
     }
 }
 
-@media only screen and (max-width: 500px) {
+/* 500px */
+@media only screen and (max-width: 560px) {
     /* HIDE HEADER SEARCH */
 
     #drpodown-search {
