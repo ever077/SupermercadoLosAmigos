@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+    <script src="https://kit.fontawesome.com/fa04600604.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+
+    <title>Mi Carrito</title>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="dropdown-menu">
+                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../index.html">Inicio</a>
+                        <a href="./contacto.html">Contacto</a>
+                        <a href="./sucursales.html">Sucursales</a>
+                        <a href="./marca.html">Nuestra Marca</a>
+                        <div class="search" id="drpodown-search">
+                            <input type="text" placeholder="Buscar..">
+                            <a href="#"><i class="fas fa-search"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href="../index.html"><img src="../IMG/Logo_sin_fondo.png" alt="Logo Supermercado"></a>
+                </div>
+                <div class="nav-items">
+                    <ul>
+                        <li><a href="../index.html" class="underline-animation">Inicio</a></li>
+                        <li><a href="./contacto.html" class="underline-animation">Contacto</a></li>
+                        <li><a href="./sucursales.html" class="underline-animation">Sucursales</a></li>
+                        <li><a href="./marca.html" class="underline-animation">Nuestra Marca</a></li>
+                    </ul>
+                </div>
+                <div class="nav-header-right">
+                    <div id="nav-search" class="search">
+                        <input type="text" placeholder="Buscar..">
+                        <a href="#"><i class="fas fa-search" title="Buscar.."></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fas fa-shopping-cart" title="Carrito de compras"></i>
+                            <span id="cart-count">0</span>
+                        </a>
+                    </div>
+                    <div id="user" class="icon">
+                        <a href="../HTML/login.html"><i class="fa-regular fa-circle-user fa-lg" title="Login"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+            
+    <main>
+        <div class="main-container">
+            <!-- SLIDER IFRAME -->
+            <div class="promo-section">
+                <div class="iframe-container">
+                    <iframe src="./slider.html" class="iframe-slider"></iframe>
+                </div>
+            </div>
+
+            <!-- SIDE BAR -->
+            <section class="side-bar-section">
+                <h2 class="h2-side-bar">Categorias</h2>
+                <aside class="side-bar">
+                    <ul>
+                        <li>
+                            <div class="primary-category">
+                                <a id="category-almacen" class="primary-category" href="#">Almacen</a>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="primary-category">
+                                <a id="category-bebes" class="primary-category" href="#">Bebés y niños</a>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="primary-category">
+                                <a id="category-hogar" class="primary-category" href="#">Cuidado del hogar</a>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="primary-category">
+                                <a id="category-perfumeria" class="primary-category" href="#">Perfumería</a>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="primary-category">
+                                <a id="category-bebidas" class="primary-category" href="#">Bebidas y bodega</a>
+                                <div></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="primary-category">
+                                <a id="category-congelados" class="primary-category" href="#">Congelados</a>
+                                <div></div>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+            </section>
+
+            <!-- CONTENT -->
+            <section class="content-section cart-section">
+                <p id="empty-cart">Ups! El carrito está vacío, <a href="../index.html">elige algunos productos</a></p>
+              
+                <section id="cart-container">
+
+                </section>
+                
+                <section id="summary">
+                    <p>Total unidades: <span id="quantity">0</span></p>
+                    <p>Total precio: $<span id="price">0</span></p>
+                    <button id="btn-cart-buy" class="btn-cart btn-buy btn-cart-disabled" disabled>Comprar</button>
+                    <button id="btn-cart-reset" class="btn-cart">Reiniciar</button>
+                </section>
+            </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="nav nav-container footer">
+            <div class="footer-left">
+                <p>© Copyright</p>
+                <ul class="developers">
+                    <li>Desarrolladores:</li>
+                    <li>Ever Dario, Godoy</li>
+                    <li>Diego, Pereyra</li>
+                    <li>Victoria, Ricardo</li>
+                    <li>Guillermina Escobar</li>
+                </ul>
+            </div>
+            <div class="footer-nav-items">
+                <ul>
+                    <li><a href="../index.html" class="underline-animation">Inicio</a></li>
+                    <li><a href="./HTML/contacto.html" class="underline-animation">Contacto</a></li>
+                    <li><a href="./HTML/sucursales.html" class="underline-animation">Sucursales</a></li>
+                    <li><a href="./HTML/marca.html" class="underline-animation">Nuestra Marca</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../JS/cart/cartCount.js"></script>
+    <script src="../JS/cart/cart.js"></script>
+    <script src="../JS/cart/cartController.js"></script>
+</body>
+
+</html>

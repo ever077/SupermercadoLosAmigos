@@ -167,9 +167,7 @@ const mostrarItems = (categoryItems) => {
     const contenedor = document.getElementById("products-container");
 
     // Vacio el contenedor
-    while (contenedor.firstChild) {
-      contenedor.removeChild(contenedor.firstChild);
-    }
+    contenedor.innerHTML = "";
 
     categoryItems.forEach(item => {
       // Creo la tarjeta
@@ -181,11 +179,16 @@ const mostrarItems = (categoryItems) => {
         <h3>${item.name}</h3>
         <p class="description">${item.description}</p>
         <p>Precio: $${item.price}</p>
-        <button class="btn-add-product">Agregar al carrito</button>
+        <button class="btn-choice">Agregar al carrito</button>
       `;
 
       // Agrego el articulo creado al contenedor
       contenedor.appendChild(article);
+
+      // Agrego funcion al boton para que al presionarlo se agrege el item al carrito
+      article.getElementsByTagName("button")[0].addEventListener("click", (event) => {
+        addToCart(event.target.parentElement, item.itemId);
+      });
     });
   }
 };

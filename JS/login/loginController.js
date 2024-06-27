@@ -4,7 +4,7 @@
 */
 
 /*
-  ******** Funcionamiento de la pagina********
+  ******** Funcionamiento de la pagina ********
 */
 
 // Boton "volver" al index.html

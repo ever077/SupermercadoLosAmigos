@@ -1,5 +1,5 @@
 
-window.addEventListener("load", (event) => {
+window.addEventListener("DOMContentLoaded", (event) => {
   // Me fijo si en el session storage hay un usuario logueado
   const isLogged = sessionStorage.getItem("isLogged");
 
@@ -16,7 +16,6 @@ window.addEventListener("load", (event) => {
     const div = document.createElement("div");
 
     div.classList.add("user-logged");
-    // div.classList.add("fat");
 
     const gender = (loggedUser.gender === "male") ? "o" : "a";
 
