@@ -3,6 +3,9 @@
   Creado por el grupo 18 del curso "Codo a Codo 24258 - 2024"
 */
 
+// Constante con la direccion de la API REST
+const API_URL2 = "http://localhost:3000/api/v1.0/cart/";
+
 /********* Funcionamiento de la pagina y manejo del DOM *********/
 
 /*
@@ -15,7 +18,7 @@ const addToCart = (article, itemId) => {
   if (isLogged === "false" || isLogged === null) {
     // Si el usuario NO esta logueado lo envia al inicio de sesion
     location.replace("./HTML/login.html");
-    console.log(isLogged);
+    
   } else {
     // Si el usuario esta logueado añade el producto al carrito
 
@@ -72,3 +75,43 @@ const addToCart = (article, itemId) => {
 }
 
 /********* Peticiones a la API REST *********/
+
+/*
+  Funcion: Guarda un carrito comprado en la base de datos
+  Parametros:
+    newCart {
+      "userId": {userId} (int),
+      "active": {active} (string),
+      "cartDetail": [
+        {
+          "itemId": {itemId} (int),
+          "price": {price} (string),
+          "quantity": {quantity} (int)
+        }
+      ]
+    }
+*/
+const saveCart = (newCart) => {
+  fetch(
+    API_URL2,
+    {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(newCart)
+    }
+  )
+  .then(response => response.json())
+  .then((data) => {
+    if (data) {
+      alert("El carrito se guardó correctamente");
+
+      // Muestro la pagina principal
+      location.href = "../index.html";
+    }
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}

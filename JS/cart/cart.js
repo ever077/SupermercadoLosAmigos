@@ -63,6 +63,8 @@ window.addEventListener("load", (event) => {
               btnBuy.setAttribute('disabled', "true");
             }
             
+            // TODO: Ver si puedo eliminar el articulo del DOM en lugar de actualizar
+            // En tal caso comprobar si el contador del icono del carrito tambien se actualiza
             location.reload();
 
           } else {
@@ -120,6 +122,46 @@ const updateSummary = () => {
     document.getElementById("quantity").innerText = totalQuantity;
   }
 }
+
+/*
+  Evento: Guardar el carrito al hacer click en comprar
+*/
+document.getElementById("btn-cart-buy").addEventListener("click", (event) => {
+  // Confirmacion de compra
+  let buyCart = confirm("¿Está segur@ de querer realizar la compra?")
+
+  if (buyCart) {
+    // Me fijo si en el session storage hay un usuario logueado
+    const isLogged = sessionStorage.getItem("isLogged");
+
+    if (isLogged === "true") {
+      // Obtengo el usuario logueado
+      const loggedUser = JSON.parse(sessionStorage.getItem("loggedUser"));
+      // obtengo los productos del carrito
+      const cartItems = JSON.parse(sessionStorage.getItem("cartItems"));
+
+      const cartDetail = [];
+
+      cartItems.forEach(item => {
+        const newItem = {
+          itemId: item.itemId,
+          price: item.price,
+          quantity: item.quantity
+        }
+
+        cartDetail.push(newItem);
+      });
+
+      const newCart = {
+        userId: loggedUser.userId,
+        active: "true",
+        cartDetail: cartDetail
+      }
+
+      saveCart(newCart);
+    }
+  }
+});
 
 /*
   Evento: Eliminar carrito al presionar el boton de resetear

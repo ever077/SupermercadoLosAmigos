@@ -3,6 +3,9 @@
   Creado por el grupo 18 del curso "Codo a Codo 24258 - 2024"
 */
 
+// Constante con la direccion de la API REST
+const API_URL = "http://localhost:3000/api/v1.0/user/";
+
 /*
   ******** Funcionamiento de la pagina********
 */
@@ -23,9 +26,6 @@ document.getElementById("btn-login").addEventListener("click", (event) => {
 /*
   ******** Peticiones a la API REST y manejo del DOM ********
 */
-
-// Constante con la direccion de la API REST
-const API_URL = "http://localhost:3000/api/v1.0/user/";
 
 // Manejo del envio del formulario para crear un nuevo usuario
 document.getElementById("register-form").addEventListener("submit", (event) => {
@@ -90,7 +90,7 @@ document.getElementById("register-form").addEventListener("submit", (event) => {
       location.href = "../index.html";
     }
   })
-  .then((error) => {
+  .catch((error) => {
     console.log(error);
   });
 });
