@@ -218,6 +218,44 @@ body {
     text-decoration: none;
 }
 
+.logged-user-popup {
+    position: absolute;
+    display: none; /* Esto cambia cuando se hace click sobre el nombre del usuario para asi desplegar el menu de opciones */
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 15px;
+    right: 0;
+    z-index: 1;
+    border: var(--third-color) solid 2px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.logged-user-popup > ul {
+    list-style: none;
+}
+
+.user-popup-btn {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    padding: 10px 30px;
+    background-color: var(--primary-color);
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: var(--font-size-fourth);
+    cursor: pointer;
+    text-align: center;
+    
+
+}
+
+.user-popup-btn:hover {
+    /* font-weight: 600; */
+    background-color: var(--primary-color-opacity);
+    color: var(--third-color);
+}
+
 /* Underline Animation */
 
 .underline-animation::after {

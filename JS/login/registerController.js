@@ -4,7 +4,7 @@
 */
 
 // Constante con la direccion de la API REST
-const API_URL = "http://localhost:3000/api/v1.0/user/";
+const API_REGISTER_URL = "http://localhost:3000/api/v1.0/user/";
 
 /*
   ******** Funcionamiento de la pagina********
@@ -71,7 +71,7 @@ document.getElementById("register-form").addEventListener("submit", (event) => {
   }
 
   fetch(
-    API_URL,
+    API_REGISTER_URL,
     {
       method: 'POST',
       headers: {

@@ -4,7 +4,7 @@
 */
 
 // Constante con la direccion de la API REST
-const API_URL = "http://localhost:3000/api/v1.0/user/login";
+const API_LOGIN_URL = "http://localhost:3000/api/v1.0/user/login";
 
 /*
   ******** Funcionamiento de la pagina ********
@@ -42,7 +42,7 @@ document.getElementById("login-form").addEventListener("submit", (event) => {
   }
 
   fetch(
-    API_URL,
+    API_LOGIN_URL,
     {
       method: 'POST',
       headers: {
@@ -79,6 +79,11 @@ document.getElementById("login-form").addEventListener("submit", (event) => {
   });
 });
 
+/*
+  Funcion:
+    Guardar el usuario logueado en la session storage y tambien bandera que 
+    indica si hay un usuario logueado
+*/
 const setUserLogged = (loggedUser) => {
   // Guardo el usuario en el session storage
   sessionStorage.setItem("loggedUser", JSON.stringify(loggedUser));
@@ -89,5 +94,5 @@ const setUserLogged = (loggedUser) => {
 
   // TODO: como manipular el nuevo DOM luego de irme al index.html y manipularlo desde esta funcion
 
-};
+}
 

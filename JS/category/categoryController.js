@@ -5,7 +5,7 @@
 */
 
 // Constante con la direccion de la API REST
-const API_URL = "http://localhost:3000/api/v1.0/category";
+const API_CATEGORY_URL = "http://localhost:3000/api/v1.0/category";
 
 // Constantes con los ID de las categorias
 const ID_ALMACEN = "1";
@@ -21,7 +21,7 @@ const ID_CONGELADOS = "6";
 document.getElementById("category-almacen").addEventListener("click", (event) => {
   // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
-    `${API_URL}/${ID_ALMACEN}`,
+    `${API_CATEGORY_URL}/${ID_ALMACEN}`,
     {
       method: 'GET',
       headers: {
@@ -42,7 +42,7 @@ document.getElementById("category-almacen").addEventListener("click", (event) =>
 document.getElementById("category-bebes").addEventListener("click", (event) => {
   // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
-    `${API_URL}/${ID_BEBES}`,
+    `${API_CATEGORY_URL}/${ID_BEBES}`,
     {
       method: 'GET',
       headers: {
@@ -63,7 +63,7 @@ document.getElementById("category-bebes").addEventListener("click", (event) => {
 document.getElementById("category-hogar").addEventListener("click", (event) => {
   // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
-    `${API_URL}/${ID_HOGAR}`,
+    `${API_CATEGORY_URL}/${ID_HOGAR}`,
     {
       method: 'GET',
       headers: {
@@ -84,7 +84,7 @@ document.getElementById("category-hogar").addEventListener("click", (event) => {
 document.getElementById("category-perfumeria").addEventListener("click", (event) => {
   // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
-    `${API_URL}/${ID_PERFUMERIA}`,
+    `${API_CATEGORY_URL}/${ID_PERFUMERIA}`,
     {
       method: 'GET',
       headers: {
@@ -105,7 +105,7 @@ document.getElementById("category-perfumeria").addEventListener("click", (event)
 document.getElementById("category-bebidas").addEventListener("click", (event) => {
   // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
-    `${API_URL}/${ID_BEBIDAS}`,
+    `${API_CATEGORY_URL}/${ID_BEBIDAS}`,
     {
       method: 'GET',
       headers: {
@@ -126,7 +126,7 @@ document.getElementById("category-bebidas").addEventListener("click", (event) =>
 document.getElementById("category-congelados").addEventListener("click", (event) => {
   // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
-    `${API_URL}/${ID_CONGELADOS}`,
+    `${API_CATEGORY_URL}/${ID_CONGELADOS}`,
     {
       method: 'GET',
       headers: {
@@ -199,7 +199,7 @@ const showItems = (categoryItems) => {
 const getAllItems = () => {
   // Hago la peticion a la API para que me liste todos los items.
   return fetch(
-    `${API_URL}/`,
+    `${API_CATEGORY_URL}/`,
     {
       method: 'GET',
       headers: {

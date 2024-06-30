@@ -4,7 +4,7 @@
 */
 
 // Constante con la direccion de la API REST
-const API_URL2 = "http://localhost:3000/api/v1.0/cart/";
+const API_CART_URL = "http://localhost:3000/api/v1.0/cart/";
 
 /********* Funcionamiento de la pagina y manejo del DOM *********/
 
@@ -93,7 +93,7 @@ const addToCart = (article, itemId) => {
 */
 const saveCart = (newCart) => {
   fetch(
-    API_URL2,
+    API_CART_URL,
     {
       method: 'POST',
       headers: {
