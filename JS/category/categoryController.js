@@ -19,7 +19,7 @@ const ID_CONGELADOS = "6";
 
 // Obtener items de la categoria: Almacen
 document.getElementById("category-almacen").addEventListener("click", (event) => {
-  // Hago la peticion a la API para que me liste todas los items de la categoria
+  // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
     `${API_URL}/${ID_ALMACEN}`,
     {
@@ -31,7 +31,7 @@ document.getElementById("category-almacen").addEventListener("click", (event) =>
   )
   .then(response => response.json())
   .then((data) => {
-    mostrarItems(data.items);
+    showItems(data.items);
   })
   .catch((error) => {
     console.error(error);
@@ -40,7 +40,7 @@ document.getElementById("category-almacen").addEventListener("click", (event) =>
 
 // Obtener items de la categoria: Bebes
 document.getElementById("category-bebes").addEventListener("click", (event) => {
-  // Hago la peticion a la API para que me liste todas los items de la categoria
+  // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
     `${API_URL}/${ID_BEBES}`,
     {
@@ -52,7 +52,7 @@ document.getElementById("category-bebes").addEventListener("click", (event) => {
   )
   .then(response => response.json())
   .then((data) => {
-    mostrarItems(data.items);
+    showItems(data.items);
   })
   .catch((error) => {
     console.error(error);
@@ -61,7 +61,7 @@ document.getElementById("category-bebes").addEventListener("click", (event) => {
 
 // Obtener items de la categoria: Hogar
 document.getElementById("category-hogar").addEventListener("click", (event) => {
-  // Hago la peticion a la API para que me liste todas los items de la categoria
+  // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
     `${API_URL}/${ID_HOGAR}`,
     {
@@ -73,7 +73,7 @@ document.getElementById("category-hogar").addEventListener("click", (event) => {
   )
   .then(response => response.json())
   .then((data) => {
-    mostrarItems(data.items);
+    showItems(data.items);
   })
   .catch((error) => {
     console.error(error);
@@ -82,7 +82,7 @@ document.getElementById("category-hogar").addEventListener("click", (event) => {
 
 // Obtener items de la categoria: Perfumeria
 document.getElementById("category-perfumeria").addEventListener("click", (event) => {
-  // Hago la peticion a la API para que me liste todas los items de la categoria
+  // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
     `${API_URL}/${ID_PERFUMERIA}`,
     {
@@ -94,7 +94,7 @@ document.getElementById("category-perfumeria").addEventListener("click", (event)
   )
   .then(response => response.json())
   .then((data) => {
-    mostrarItems(data.items);
+    showItems(data.items);
   })
   .catch((error) => {
     console.error(error);
@@ -103,7 +103,7 @@ document.getElementById("category-perfumeria").addEventListener("click", (event)
 
 // Obtener items de la categoria: Bebidas
 document.getElementById("category-bebidas").addEventListener("click", (event) => {
-  // Hago la peticion a la API para que me liste todas los items de la categoria
+  // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
     `${API_URL}/${ID_BEBIDAS}`,
     {
@@ -115,7 +115,7 @@ document.getElementById("category-bebidas").addEventListener("click", (event) =>
   )
   .then(response => response.json())
   .then((data) => {
-    mostrarItems(data.items);
+    showItems(data.items);
   })
   .catch((error) => {
     console.error(error);
@@ -124,7 +124,7 @@ document.getElementById("category-bebidas").addEventListener("click", (event) =>
 
 // Obtener items de la categoria: Congelados
 document.getElementById("category-congelados").addEventListener("click", (event) => {
-  // Hago la peticion a la API para que me liste todas los items de la categoria
+  // Hago la peticion a la API para que me liste todos los items de la categoria
   fetch(
     `${API_URL}/${ID_CONGELADOS}`,
     {
@@ -136,7 +136,7 @@ document.getElementById("category-congelados").addEventListener("click", (event)
   )
   .then(response => response.json())
   .then((data) => {
-    mostrarItems(data.items);
+    showItems(data.items);
   })
   .catch((error) => {
     console.error(error);
@@ -160,7 +160,7 @@ document.getElementById("category-congelados").addEventListener("click", (event)
       "image": (string)
     }
 */
-const mostrarItems = (categoryItems) => {
+const showItems = (categoryItems) => {
   // Verifico que haya items para mostrar
   if (categoryItems.length > 0) {
     // Obtengo el contenedor de las tarjetas
@@ -192,3 +192,24 @@ const mostrarItems = (categoryItems) => {
     });
   }
 };
+
+/*
+  Funcion: Retorna una lista con todos los items.
+*/
+const getAllItems = () => {
+  // Hago la peticion a la API para que me liste todos los items.
+  return fetch(
+    `${API_URL}/`,
+    {
+      method: 'GET',
+      headers: {
+        accept: 'application/json'
+      }
+    }
+  )
+  .then(response => response.json())
+  .then(data => data.items)
+  .catch((error) => {
+    console.error(error);
+  });
+}

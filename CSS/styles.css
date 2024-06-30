@@ -842,7 +842,7 @@ display: none;
 
 #cart-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     width: 98%;
     margin-bottom: 5px;
     column-gap: .5rem;
@@ -871,7 +871,6 @@ display: none;
 
 .card-product {
     transition: 200ms;
-    max-width: 120px;
 }
 
 .card-product:hover{

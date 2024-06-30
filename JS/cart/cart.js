@@ -34,9 +34,9 @@ window.addEventListener("load", (event) => {
         <p class="description">${item.description}</p>
         <span>$${item.price}</span>
         <div>
-        <button class="btn-choice">-</button>
-        <span class="quantity">${item.quantity}</span>
-        <button class="btn-choice">+</button>
+          <button class="btn-choice">-</button>
+          <span class="quantity">${item.quantity}</span>
+          <button class="btn-choice">+</button>
         </div>
       `;
 
