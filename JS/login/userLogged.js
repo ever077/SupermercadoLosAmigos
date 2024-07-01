@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       loggedUserPopup.innerHTML = `
         <ul>
             <li id="user-config" class="user-popup-btn"><i class="fa-solid fa-gear"></i>Configuración</li>
-            <li id="user-shops" class="user-popup-btn"><i class="fa-brands fa-shopify"></i>Mis compras</li>
+            <li id="user-shopping-history" class="user-popup-btn"><i class="fa-brands fa-shopify"></i>Mis compras</li>
             <li id="user-logout" class="user-popup-btn"><i class="fa-solid fa-share-from-square"></i>Cerrar sesión</li>
         </ul>
       `
@@ -52,8 +52,17 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
 
     // Coloco el listener para ir a las compras del usuario
-    document.getElementById("user-shops").addEventListener("click", (event) => {
-      // TODO: Pantalla que permita mostrar todas las compras pasadas del usuario
+    document.getElementById("user-shopping-history").addEventListener("click", (event) => {
+      // Muestro la pagina del historial de compras
+      const dir = location.href;
+      
+      if (dir.split("/").at(-1).includes("index")) {
+        // Estoy en el index.html
+        location.href = "./HTML/historialCompras.html";
+      } else {
+        // Estoy en otra pagina
+        location.href = "./historialCompras.html";
+      }
     });
 
     // Coloco el listener para hacer logout
@@ -69,7 +78,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     bandera que indica si hay un usuario logueado en false
 */
 const logout = () => {
-  console.log("llegue");
   sessionStorage.removeItem("loggedUser");
   sessionStorage.removeItem("cartItems");
   sessionStorage.setItem("isLogged", "false");

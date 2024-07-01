@@ -3,10 +3,12 @@
   Creado por el grupo 18 del curso "Codo a Codo 24258 - 2024"
 */
 
+
+
 /*
   Evento: Cuando se carga el cart.html muestra todos los elementos del carrito
 */
-window.addEventListener("load", (event) => {
+window.addEventListener("DOMContentLoaded", (event) => {
   const btnBuy = document.getElementById("btn-cart-buy"); // Boton de comprar
   const cartItems = JSON.parse(sessionStorage.getItem("cartItems"));
 

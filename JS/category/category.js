@@ -5,6 +5,4 @@
 
 window.addEventListener("DOMContentLoaded", (event) => {
   getAllItems().then(itemList => showItems(itemList));
-  // console.log(typeof itemList, itemList);
-  // showItems(itemList);
 });

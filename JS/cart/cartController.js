@@ -107,9 +107,69 @@ const saveCart = (newCart) => {
     if (data) {
       alert("El carrito se guardó correctamente");
 
+      // Elimina el carrito de la session storage
+      sessionStorage.removeItem("cartItems");
+
       // Muestro la pagina principal
       location.href = "../index.html";
     }
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
+
+/*
+  Funcion: Retorna los carritos de un usuario
+  Parametros: userId (int)
+  Retorna:
+    Lista de todos los carritos o lista vacia
+    [
+      cart {
+        "cartId": {cartId} (int),
+        "userId": {userId} (int),
+        "active": {active} (bool),
+        "date": {date} (date),
+        "cartDetail": [
+          {
+            "cartDetailId": {cartDetailId} (int),
+            "cartId": {cartId} (int),
+            "itemId": {itemId} (int),
+            "price": {price} (string),
+            "quantity": {quantity} (int),
+            "item": item {
+              "itemId": {itemId} (int),
+              "categoryId": {categoryId} (int),
+              "name": {cartId} (string),
+              "description": {itemId} (string),
+              "price": {price} (string),
+              "image": {quantity} (string)
+            }
+          }
+        ]
+      }
+    ]
+*/
+const getAllCartsFromUser = (userId) => {
+  return fetch(
+    `${API_CART_URL}/`,
+    {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+      }
+    }
+  )
+  .then(response => response.json())
+  .then((data) => {
+    const cartsList = [];
+    for (const item of data.items) {
+      if (item.userId === userId) {
+        cartsList.push(item);
+      }
+    }
+    // const cartsList = data.items.find(i => i.userId === userId);
+    return cartsList;
   })
   .catch((error) => {
     console.log(error);
