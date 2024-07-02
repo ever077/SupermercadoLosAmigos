@@ -38,8 +38,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
                 <img src="${cartDetail.item.image}" alt="${cartDetail.item.name}" width="100px">
               </div>
               <div class="col-7">
-                <h5>${cartDetail.item.name}</h5>
-                <p>${cartDetail.item.description}</p>
+                <h5 class="text-capitalize">${cartDetail.item.name}</h5>
+                <p class="text-capitalize">${cartDetail.item.description}</p>
               </div>
               <div class="col-3 d-flex flex-column justify-content-center align-items-center">
                 <p>Precio: $${cartDetail.price}</p>
@@ -50,21 +50,24 @@ window.addEventListener("DOMContentLoaded", (event) => {
         `;
       });
 
+      // Formateo la fecha
+      const [y, m, d] = cart.date.split("T")[0].split("-");
+
       let header = `
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <h2 class="accordion-header" id="heading-${cart.cartId}">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${cart.cartId}" aria-expanded="true" aria-controls="collapseOne">
             <div class="row w-100">
               <div class="col-4 d-flex align-items-center">
-                <p class="mb-0">Fecha: <span>${cart.date.split("T")[0]}</span></p>
+                <p class="mb-0">Fecha: <span>${d}/${m}/${y}</span></p>
               </div>
               <div class="col-8 d-flex flex-column gap-2 align-items-end justify-content-center pe-4">
-                <p class="mb-0">Monto total: <span>$${totalPrice}</span></p>
-                <p class="mb-0">Cant. productos: <span>${totalQuantity}</span></p>
+                <p class="mb-0">Monto total: <span class="fw-bold">$${totalPrice}</span></p>
+                <p class="mb-0">Cant. productos: <span class="fw-bold">${totalQuantity}</span></p>
               </div>
             </div>
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div id="collapse-${cart.cartId}" class="accordion-collapse collapse" aria-labelledby="heading-${cart.cartId}" data-bs-parent="#accordion-carts">
       `;
 
       div.innerHTML = header + content + "</div>";

@@ -194,7 +194,7 @@ const showItems = (categoryItems) => {
 };
 
 /*
-  Funcion: Retorna una lista con todos los items.
+  Funcion: Hace prticion a la API REST y retorna una lista con todos los items.
 */
 const getAllItems = () => {
   // Hago la peticion a la API para que me liste todos los items.

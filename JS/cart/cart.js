@@ -3,8 +3,6 @@
   Creado por el grupo 18 del curso "Codo a Codo 24258 - 2024"
 */
 
-
-
 /*
   Evento: Cuando se carga el cart.html muestra todos los elementos del carrito
 */

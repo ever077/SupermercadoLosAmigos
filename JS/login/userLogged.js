@@ -1,3 +1,8 @@
+/*
+  Script que se encarga de mostrar el nombre del usuario logueado y de construir el menu
+  desplegable y manejar sus funciones.
+  Creado por el grupo 18 del curso "Codo a Codo 24258 - 2024"
+*/
 
 window.addEventListener("DOMContentLoaded", (event) => {
   // Me fijo si en el session storage hay un usuario logueado
@@ -48,19 +53,28 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     // Coloco el listener para ir a las configuraciones del usuario
     document.getElementById("user-config").addEventListener("click", (event) => {
-      // TODO: Pantalla que permita editar el usuario
+      const dir = location.href;
+      
+      // Muestro la pagina del historial de compras
+      if (dir.split("/").at(-1).includes("index")) {
+        // Si estoy en el index.html
+        location.href = "./HTML/actualizarUsuario.html";
+      } else {
+        // Si estoy en otra pagina
+        location.href = "./actualizarUsuario.html";
+      }
     });
 
     // Coloco el listener para ir a las compras del usuario
     document.getElementById("user-shopping-history").addEventListener("click", (event) => {
-      // Muestro la pagina del historial de compras
       const dir = location.href;
       
+      // Muestro la pagina del historial de compras
       if (dir.split("/").at(-1).includes("index")) {
-        // Estoy en el index.html
+        // Si estoy en el index.html
         location.href = "./HTML/historialCompras.html";
       } else {
-        // Estoy en otra pagina
+        // Si estoy en otra pagina
         location.href = "./historialCompras.html";
       }
     });

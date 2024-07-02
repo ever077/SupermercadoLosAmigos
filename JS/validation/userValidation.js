@@ -8,7 +8,7 @@
 */
 const createUserFormEmptyValidation = (name, lastName, birthDate, email, password, repeatedPassword) => {
   if (
-    (name.trim().length === 0) ||(lastName.trim().length === 0) ||
+    (name.trim().length === 0) || (lastName.trim().length === 0) ||
     (birthDate.trim().length === 0) || (email.trim().length === 0) ||
     (password.trim().length === 0) || (repeatedPassword.trim().length === 0)) {
     return false;

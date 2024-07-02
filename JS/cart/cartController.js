@@ -17,7 +17,7 @@ const addToCart = (article, itemId) => {
 
   if (isLogged === "false" || isLogged === null) {
     // Si el usuario NO esta logueado lo envia al inicio de sesion
-    location.replace("./HTML/login.html");
+    location.href = "./HTML/login.html";
     
   } else {
     // Si el usuario esta logueado añade el producto al carrito

@@ -11,7 +11,7 @@ const API_LOGIN_URL = "http://localhost:3000/api/v1.0/user/login";
 */
 
 // Boton "volver" al index.html
-document.getElementById("btn-volver").addEventListener("click", (event) => {
+document.getElementById("btn-back").addEventListener("click", (event) => {
   event.preventDefault();
   window.history.back();
 });
@@ -90,9 +90,7 @@ const setUserLogged = (loggedUser) => {
   sessionStorage.setItem("isLogged", "true");
 
   // Muestro la pagina principal
-  location.href = "../index.html";
-
-  // TODO: como manipular el nuevo DOM luego de irme al index.html y manipularlo desde esta funcion
-
+  window.history.back();
+  // location.href = "../index.html";
 }
 

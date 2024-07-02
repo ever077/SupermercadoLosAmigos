@@ -11,7 +11,7 @@ const API_REGISTER_URL = "http://localhost:3000/api/v1.0/user/";
 */
 
 // Boton "volver" al login.html
-document.getElementById("btn-cancelar").addEventListener("click", (event) => {
+document.getElementById("btn-cancel").addEventListener("click", (event) => {
   event.preventDefault();
   // location.href = "./login.html";
   // location.replace("./login.html");
